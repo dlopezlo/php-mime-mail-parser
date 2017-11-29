@@ -502,7 +502,7 @@ class Parser
                 $mimePartStr = $this->getPartComplete($part);
 
                 // Escape all potentially unsafe characters from the filename
-                $filename = preg_replace('((^\.)|\'|\/|(\.$))', '_', $filename);
+                $filename = preg_replace('((^\.)|\'| |\/|(\.$))', '_', $filename);
 
                 $attachments[] = new Attachment(
                     $filename,
